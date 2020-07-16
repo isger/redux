@@ -1,13 +1,13 @@
 import counterReducer from "./counter";
 import loggedReducer from "./isLogged";
-import counterController from "./counter-control";
+import counterArray from "./counter-array";
 
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
     counterReducer,
     loggedReducer,
-    counterController
+    counterArray
 })
 
 export default allReducers;
