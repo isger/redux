@@ -9,3 +9,15 @@ export const decrement = () => {
         type : 'DECREMENT'
     };
 }
+
+export const addCounter = () => {
+    return {
+        type : 'ADD_COUNTER'
+    }
+}
+
+export const removeCounter = () => {
+    return {
+        type : 'REMOVE_COUNTER'
+    }
+}

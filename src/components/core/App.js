@@ -4,18 +4,18 @@ import './App.css';
 import AddButton from "../add-button/AddButton";
 import RemoveButton from "../remove-button/RemoveButton";
 
+import AddCounterButton from "../add-counter-button/AddCounterButton";
+
 import {useSelector} from "react-redux";
 
 function App() {
 
     const counter = useSelector(state => state.counterReducer);
+    const counterIndex = useSelector(state => state.counterController);
 
-    let [counterIndex, setCounterIndex] = useState(1);
     let [counterArray, setCounterArray] = useState([]);
 
     const showMoreCounters = () => {
-
-        setCounterIndex(counterIndex + 1);
 
         for (let i = 0; i < counterIndex || i === counterIndex; i++) {
             setCounterArray(counterArray.concat(
@@ -29,7 +29,6 @@ function App() {
             ))
         }
 
-        console.log(counterArray);
         return counterArray;
 
     }
@@ -37,15 +36,15 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <button
-                    className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow my-8 mx-8"
-                    onClick={() => showMoreCounters()}>Add a counter
-                </button>
+
+                <AddCounterButton />
+
                 <div className="flex">
                     {counterArray.map((value, index) => {
                         return value;
                     })}
                 </div>
+
             </header>
         </div>
     );
