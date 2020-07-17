@@ -11,11 +11,10 @@ import {useSelector} from "react-redux";
 function App() {
 
     const counter = useSelector(state => state.counterReducer);
-    const counterIndex = useSelector(state => state.counterController);
 
     let [counterArray, setCounterArray] = useState([]);
 
-    const showMoreCounters = () => {
+   /* const showMoreCounters = () => {
 
         for (let i = 0; i < counterIndex || i === counterIndex; i++) {
             setCounterArray(counterArray.concat(
@@ -31,7 +30,7 @@ function App() {
 
         return counterArray;
 
-    }
+    } */
 
     return (
         <div className="App">
