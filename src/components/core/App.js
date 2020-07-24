@@ -25,7 +25,7 @@ const App = () => {
                                 <h1 className="text-6xl mx-auto my-8">Counter {index}</h1>
                                 <div className="inline-block">
                                     <AddButton
-                                        counterToUpdate={"Test"}
+                                        counterToUpdate={index}
                                     />
                                     <RemoveButton
                                         counterToUpdate={index}
