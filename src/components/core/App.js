@@ -12,13 +12,18 @@ function App() {
 
     let controller = useSelector(state => state.counterStore);
 
+
+    /* const showMoreCounters = () => {
+        console.log(controller);
+    } */
+
    const showMoreCounters = () => {
 
-        for (let i = 0; i < controller.length; i++) {
+        controller.map(counter => ) {
            return(
                 <div key={i} className="text-center w-1/3">
                     <h1 className="text-6xl mx-auto my-8">Counter {i}</h1>
-                    <h1 className="text-6xl mx-auto my-8">{controller}</h1>
+                    <h1 className="text-6xl mx-auto my-8">Hello</h1>
                     <div className="inline-block">
                         <RemoveButton/> <AddButton/>
                     </div>
