@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Redux */
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 import { addCounter } from "../../redux/actions";
 

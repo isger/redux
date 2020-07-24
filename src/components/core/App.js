@@ -23,9 +23,13 @@ const App = () => {
                         return (
                             <div key={index} className="text-center w-1/3">
                                 <h1 className="text-6xl mx-auto my-8">Counter {index}</h1>
-                                <h1 className="text-6xl mx-auto my-8">Hello</h1>
                                 <div className="inline-block">
-                                    <RemoveButton/> <AddButton/>
+                                    <AddButton
+                                        counterToUpdate={"Test"}
+                                    />
+                                    <RemoveButton
+                                        counterToUpdate={index}
+                                    />
                                 </div>
                             </div>
                         )
