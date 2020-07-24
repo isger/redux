@@ -7,7 +7,10 @@ import {Provider} from "react-redux";
 
 import allReducers from "./redux/reducers";
 
-let store = createStore(allReducers);
+let store = createStore(
+    allReducers,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 /* Components */
 const App = React.lazy(() => import('./components/core/App'));
