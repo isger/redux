@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 
 import AddButton from "../add-button/AddButton";
@@ -8,30 +8,9 @@ import AddCounterButton from "../add-counter-button/AddCounterButton";
 
 import {useSelector} from "react-redux";
 
-function App() {
+const App = () => {
 
     let controller = useSelector(state => state.counterStore);
-
-
-    /* const showMoreCounters = () => {
-        console.log(controller);
-    } */
-
-   const showMoreCounters = () => {
-
-        controller.map(counter => ) {
-           return(
-                <div key={i} className="text-center w-1/3">
-                    <h1 className="text-6xl mx-auto my-8">Counter {i}</h1>
-                    <h1 className="text-6xl mx-auto my-8">Hello</h1>
-                    <div className="inline-block">
-                        <RemoveButton/> <AddButton/>
-                    </div>
-                </div>
-           )
-        }
-
-    }
 
     return (
         <div className="App">
@@ -40,7 +19,17 @@ function App() {
                 <AddCounterButton />
 
                 <div className="flex">
-                    { showMoreCounters() }
+                    {controller.map((counter, index) => {
+                        return (
+                            <div key={index} className="text-center w-1/3">
+                                <h1 className="text-6xl mx-auto my-8">Counter {index}</h1>
+                                <h1 className="text-6xl mx-auto my-8">Hello</h1>
+                                <div className="inline-block">
+                                    <RemoveButton/> <AddButton/>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
 
             </header>
