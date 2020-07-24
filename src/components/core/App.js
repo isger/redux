@@ -18,7 +18,7 @@ function App() {
            return(
                 <div key={i} className="text-center w-1/3">
                     <h1 className="text-6xl mx-auto my-8">Counter {i}</h1>
-                    <h1 className="text-6xl mx-auto my-8">{counter}</h1>
+                    <h1 className="text-6xl mx-auto my-8">{controller}</h1>
                     <div className="inline-block">
                         <RemoveButton/> <AddButton/>
                     </div>
@@ -35,7 +35,7 @@ function App() {
                 <AddCounterButton />
 
                 <div className="flex">
-                    {showMoreCounters()}
+                    { showMoreCounters() }
                 </div>
 
             </header>
