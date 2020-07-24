@@ -10,8 +10,11 @@ export const decrement = () => {
     };
 }
 
-export const addCounter = () => {
+export const addCounter = (counterNumber) => {
     return {
         type : 'ADD_COUNTER',
+        payload: {
+            index: counterNumber
+        }
     }
 }
