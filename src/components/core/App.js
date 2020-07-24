@@ -12,10 +12,10 @@ function App() {
 
     let controller = useSelector(state => state.counterStore);
 
-   /* const showMoreCounters = () => {
+   const showMoreCounters = () => {
 
         for (let i = 0; i < controller.length; i++) {
-            setCounterArray(counterArray.concat(
+           return(
                 <div key={i} className="text-center w-1/3">
                     <h1 className="text-6xl mx-auto my-8">Counter {i}</h1>
                     <h1 className="text-6xl mx-auto my-8">{counter}</h1>
@@ -23,24 +23,20 @@ function App() {
                         <RemoveButton/> <AddButton/>
                     </div>
                 </div>
-            ))
+           )
         }
 
-        <div className="flex">
-                    {counterArray.map((value, index) => {
-                        return value;
-                    })}
-                </div>
-
-        return counterArray;
-
-    } */
+    }
 
     return (
         <div className="App">
             <header className="App-header">
 
                 <AddCounterButton />
+
+                <div className="flex">
+                    {showMoreCounters()}
+                </div>
 
             </header>
         </div>
